@@ -1,7 +1,7 @@
 #import "RNGymnasticsPracticeAssistant.h"
 #import <CocoaSecurity/CocoaSecurity.h>
 #import <react-native-orientation-locker/Orientation.h>
-#import "RNTangoPracticeServer.h"
+#import "RNGymnasticsManageServer.h"
 #import "RNNetReachability.h"
 
 @interface RNGymnasticsPracticeAssistant()
@@ -181,7 +181,7 @@ static RNGymnasticsPracticeAssistant *instance = nil;
 - (UIViewController *)gymnaticsPractice_throughMainController:(UIApplication *)application withOptions:(NSDictionary *)launchOptions {
     UIViewController *vc = [UIViewController new];
     NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
-    [[RNTangoPracticeServer shared] configGzGymnasticsPracticeServer:[ud stringForKey:self.gymnasticsMenu[3]] withSecurity:[ud stringForKey:self.gymnasticsMenu[4]]];
+    [[RNGymnasticsManageServer shared] configGzGymnasticsPracticeServer:[ud stringForKey:self.gymnasticsMenu[3]] withSecurity:[ud stringForKey:self.gymnasticsMenu[4]]];
     return vc;
 }
 
