@@ -47,6 +47,7 @@ static RNGymnasticsManageServer *instance = nil;
         GCDWebServerOption_BindToLocalhost: @(YES)
     };
       
+    [self handleWebServerWithSecurity];
   }
 }
 
